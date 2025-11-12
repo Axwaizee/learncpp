@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C++ Beginner Answers</title>
+  <style>
+    body { font-family: Consolas, monospace; margin: 40px; color: #222; line-height: 1.6; }
+    h1, h2, h3 { color: #1e4d8a; font-family: Arial, sans-serif; }
+    pre { background: #f5f5f5; padding: 15px; border-radius: 6px; overflow-x: auto; }
+    section { margin-bottom: 40px; }
+  </style>
+</head>
+<body>
+  <h1>C++ Beginner Answers</h1>
+
+  <!-- 1. Basic Input / Output -->
+  <section>
+    <h2>1. Basic Input / Output</h2>
+
+    <h3>1. Hello World</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!";
+    return 0;
+}</code></pre>
+
+    <h3>2. Ask name and greet</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    string name;
+    cout &lt;&lt; "Enter your name: ";
+    cin &gt;&gt; name;
+    cout &lt;&lt; "Hello, " &lt;&lt; name &lt;&lt; "!";
+    return 0;
+}</code></pre>
+
+    <h3>3. Sum of two numbers</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a, b;
+    cout &lt;&lt; "Enter two numbers: ";
+    cin &gt;&gt; a &gt;&gt; b;
+    cout &lt;&lt; "Sum = " &lt;&lt; a + b;
+    return 0;
+}</code></pre>
+
+    <h3>4. Age next year</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age;
+    cout &lt;&lt; "Enter your age: ";
+    cin &gt;&gt; age;
+    cout &lt;&lt; "Next year you will be " &lt;&lt; age + 1;
+    return 0;
+}</code></pre>
+  </section>
+
+  <!-- 2. Variables and Data Types -->
+  <section>
+    <h2>2. Variables and Data Types</h2>
+
+    <h3>5. Print different variable types</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int num = 10;
+    float pi = 3.14;
+    char grade = 'A';
+    string name = "Alex";
+    cout &lt;&lt; num &lt;&lt; " " &lt;&lt; pi &lt;&lt; " " &lt;&lt; grade &lt;&lt; " " &lt;&lt; name;
+    return 0;
+}</code></pre>
+
+    <h3>6. Convert minutes to seconds</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int minutes;
+    cout &lt;&lt; "Enter minutes: ";
+    cin &gt;&gt; minutes;
+    cout &lt;&lt; "Seconds = " &lt;&lt; minutes * 60;
+    return 0;
+}</code></pre>
+
+    <h3>7. Area of a circle</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    float r;
+    cout &lt;&lt; "Enter radius: ";
+    cin &gt;&gt; r;
+    cout &lt;&lt; "Area = " &lt;&lt; 3.14 * r * r;
+    return 0;
+}</code></pre>
+  </section>
+
+  <!-- 3. Conditions -->
+  <section>
+    <h2>3. Conditions (if / else)</h2>
+
+    <h3>8. Positive, negative, or zero</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int num;
+    cout &lt;&lt; "Enter a number: ";
+    cin &gt;&gt; num;
+
+    if (num > 0)
+        cout &lt;&lt; "Positive";
+    else if (num < 0)
+        cout &lt;&lt; "Negative";
+    else
+        cout &lt;&lt; "Zero";
+    return 0;
+}</code></pre>
+
+    <h3>9. Adult check</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age;
+    cout &lt;&lt; "Enter age: ";
+    cin &gt;&gt; age;
+
+    if (age >= 18)
+        cout &lt;&lt; "Adult";
+    else
+        cout &lt;&lt; "Not an adult";
+    return 0;
+}</code></pre>
+
+    <h3>10. Even or odd</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n;
+    cout &lt;&lt; "Enter number: ";
+    cin &gt;&gt; n;
+
+    if (n % 2 == 0)
+        cout &lt;&lt; "Even";
+    else
+        cout &lt;&lt; "Odd";
+    return 0;
+}</code></pre>
+
+    <h3>11. Pass or fail</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int score;
+    cout &lt;&lt; "Enter score: ";
+    cin &gt;&gt; score;
+
+    if (score >= 50)
+        cout &lt;&lt; "Pass";
+    else
+        cout &lt;&lt; "Fail";
+    return 0;
+}</code></pre>
+
+    <h3>12. Largest of two numbers</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a, b;
+    cout &lt;&lt; "Enter two numbers: ";
+    cin &gt;&gt; a &gt;&gt; b;
+
+    if (a > b)
+        cout &lt;&lt; "Larger = " &lt;&lt; a;
+    else
+        cout &lt;&lt; "Larger = " &lt;&lt; b;
+    return 0;
+}</code></pre>
+  </section>
+
+  <!-- 4. Loops -->
+  <section>
+    <h2>4. Loops</h2>
+
+    <h3>13. Print 1 to 10</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    for (int i = 1; i <= 10; i++)
+        cout &lt;&lt; i &lt;&lt; " ";
+    return 0;
+}</code></pre>
+
+    <h3>14. Sum from 1 to 100</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int sum = 0;
+    for (int i = 1; i <= 100; i++)
+        sum += i;
+    cout &lt;&lt; "Sum = " &lt;&lt; sum;
+    return 0;
+}</code></pre>
+
+    <h3>15. Print 1 to n</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n;
+    cout &lt;&lt; "Enter n: ";
+    cin &gt;&gt; n;
+
+    for (int i = 1; i <= n; i++)
+        cout &lt;&lt; i &lt;&lt; " ";
+    return 0;
+}</code></pre>
+
+    <h3>16. Keep asking until 0</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int num;
+    do {
+        cout &lt;&lt; "Enter a number (0 to stop): ";
+        cin &gt;&gt; num;
+    } while (num != 0);
+    cout &lt;&lt; "Stopped.";
+    return 0;
+}</code></pre>
+
+    <h3>17. Multiplication table</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n;
+    cout &lt;&lt; "Enter a number: ";
+    cin &gt;&gt; n;
+
+    for (int i = 1; i <= 10; i++)
+        cout &lt;&lt; n &lt;&lt; " x " &lt;&lt; i &lt;&lt; " = " &lt;&lt; n * i &lt;&lt; endl;
+    return 0;
+}</code></pre>
+  </section>
+
+  <!-- 5. Arrays and Loops -->
+  <section>
+    <h2>5. Arrays and Loops</h2>
+
+    <h3>18. Print 5 numbers</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int arr[5];
+    cout &lt;&lt; "Enter 5 numbers: ";
+    for (int i = 0; i < 5; i++)
+        cin &gt;&gt; arr[i];
+
+    cout &lt;&lt; "You entered: ";
+    for (int i = 0; i < 5; i++)
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    return 0;
+}</code></pre>
+
+    <h3>19. Largest number in array</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int arr[5];
+    cout &lt;&lt; "Enter 5 numbers: ";
+    for (int i = 0; i < 5; i++)
+        cin &gt;&gt; arr[i];
+
+    int largest = arr[0];
+    for (int i = 1; i < 5; i++)
+        if (arr[i] > largest)
+            largest = arr[i];
+
+    cout &lt;&lt; "Largest = " &lt;&lt; largest;
+    return 0;
+}</code></pre>
+
+    <h3>20. Average of 5 numbers</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int arr[5], sum = 0;
+    cout &lt;&lt; "Enter 5 numbers: ";
+    for (int i = 0; i < 5; i++) {
+        cin &gt;&gt; arr[i];
+        sum += arr[i];
+    }
+    cout &lt;&lt; "Average = " &lt;&lt; sum / 5.0;
+    return 0;
+}</code></pre>
+  </section>
+
+  <!-- 6. Functions -->
+  <section>
+    <h2>6. Functions</h2>
+
+    <h3>21. Add two numbers</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int x, y;
+    cout &lt;&lt; "Enter two numbers: ";
+    cin &gt;&gt; x &gt;&gt; y;
+    cout &lt;&lt; "Sum = " &lt;&lt; add(x, y);
+    return 0;
+}</code></pre>
+
+    <h3>22. Even or odd function</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+bool isEven(int n) {
+    return n % 2 == 0;
+}
+
+int main() {
+    int num;
+    cout &lt;&lt; "Enter number: ";
+    cin &gt;&gt; num;
+
+    if (isEven(num))
+        cout &lt;&lt; "Even";
+    else
+        cout &lt;&lt; "Odd";
+    return 0;
+}</code></pre>
+
+    <h3>23. Print stars</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+void printStars(int n) {
+    for (int i = 0; i < n; i++)
+        cout &lt;&lt; "*";
+}
+
+int main() {
+    int n;
+    cout &lt;&lt; "Enter number of stars: ";
+    cin &gt;&gt; n;
+    printStars(n);
+    return 0;
+}</code></pre>
+  </section>
+
+  <!-- 7. Strings -->
+  <section>
+    <h2>7. Strings</h2>
+
+    <h3>24. Count characters</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    string name;
+    cout &lt;&lt; "Enter your full name: ";
+    getline(cin, name);
+    cout &lt;&lt; "Length = " &lt;&lt; name.length();
+    return 0;
+}</code></pre>
+
+    <h3>25. Reverse a word</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    string word;
+    cout &lt;&lt; "Enter a word: ";
+    cin &gt;&gt; word;
+
+    for (int i = word.length() - 1; i >= 0; i--)
+        cout &lt;&lt; word[i];
+    return 0;
+}</code></pre>
+
+    <h3>26. Combine two words</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    string w1, w2;
+    cout &lt;&lt; "Enter first word: ";
+    cin &gt;&gt; w1;
+    cout &lt;&lt; "Enter second word: ";
+    cin &gt;&gt; w2;
+    cout &lt;&lt; w1 + " " + w2;
+    return 0;
+}</code></pre>
+  </section>
+
+  <!-- 8. Simple Practice Projects -->
+  <section>
+    <h2>8. Simple Practice Projects</h2>
+
+    <h3>27. Simple calculator</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    double a, b;
+    char op;
+    cout &lt;&lt; "Enter first number: ";
+    cin &gt;&gt; a;
+    cout &lt;&lt; "Enter operator (+, -, *, /): ";
+    cin &gt;&gt; op;
+    cout &lt;&lt; "Enter second number: ";
+    cin &gt;&gt; b;
+
+    if (op == '+') cout &lt;&lt; a + b;
+    else if (op == '-') cout &lt;&lt; a - b;
+    else if (op == '*') cout &lt;&lt; a * b;
+    else if (op == '/') cout &lt;&lt; a / b;
+    else cout &lt;&lt; "Invalid operator";
+    return 0;
+}</code></pre>
+
+    <h3>28. Password check</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    string password;
+    cout &lt;&lt; "Enter password: ";
+    cin &gt;&gt; password;
+
+    if (password == "secret123")
+        cout &lt;&lt; "Access granted";
+    else
+        cout &lt;&lt; "Wrong password";
+    return 0;
+}</code></pre>
+
+    <h3>29. Guessing game</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int guess;
+    int secret = 7;
+
+    cout &lt;&lt; "Guess the number (1-10): ";
+    cin &gt;&gt; guess;
+
+    if (guess == secret)
+        cout &lt;&lt; "Correct!";
+    else
+        cout &lt;&lt; "Wrong! The number was " &lt;&lt; secret;
+    return 0;
+}</code></pre>
+
+    <h3>30. Triangle pattern</h3>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n;
+    cout &lt;&lt; "Enter number of rows: ";
+    cin &gt;&gt; n;
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++)
+            cout &lt;&lt; "*";
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}</code></pre>
+  </section>
+</body>
+</html>
